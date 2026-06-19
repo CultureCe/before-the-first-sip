@@ -81,14 +81,8 @@ function Navbar() {
       {mobileOpen && (
         <div className="fixed inset-0 z-30 bg-[#2A1810]/98 backdrop-blur-md flex flex-col justify-center px-8">
           {links.map((l, i) => (
-            <motion.button
-              key={l.href}
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: i * 0.06 }}
-              onClick={() => go(l.href)}
-              className="block w-full text-left py-3 font-playfair text-2xl text-[#E8D8C3]/70 hover:text-[#B08D57] transition-colors"
-            >
+            <motion.button key={l.href} initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.06 }}
+              onClick={() => go(l.href)} className="block w-full text-left py-3 font-playfair text-2xl text-[#E8D8C3]/70 hover:text-[#B08D57] transition-colors">
               {l.label}
             </motion.button>
           ))}
@@ -106,12 +100,9 @@ function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-[#2A1810]/75 via-[#2A1810]/55 to-[#2A1810]/90"/>
       </div>
       <div className="relative z-20 text-center max-w-5xl mx-auto px-6">
-        <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8 }} className="font-inter text-[11px] tracking-[0.5em] uppercase text-[#B08D57] mb-10">
-          Before The First Sip
-        </motion.p>
+        <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8 }} className="font-inter text-[11px] tracking-[0.5em] uppercase text-[#B08D57] mb-10">Before The First Sip</motion.p>
         <motion.h1 initial={{ opacity: 0, y: 60 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6, duration: 1 }} className="font-playfair text-5xl md:text-7xl lg:text-8xl text-[#FAF8F5] leading-[0.95] mb-8">
-          Coffee is not a beverage.<br/>
-          <span className="italic text-[#B08D57]">It's a conversation.</span>
+          Coffee is not a beverage.<br/><span className="italic text-[#B08D57]">It's a conversation.</span>
         </motion.h1>
         <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.4, duration: 0.9 }} className="font-inter text-base md:text-lg text-[#FAF8F5]/55 max-w-xl mx-auto leading-relaxed">
           Exploring the stories, science, culture and obsession behind the world's favorite drink.
@@ -149,17 +140,14 @@ function BeforeTheFirstSip() {
           <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="font-playfair text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-[#3B2416] mb-8">
             Before The <span className="italic text-[#B08D57]">First Sip</span>
           </motion.h2>
-          {[
-            'Coffee does not need another website. It deserves a place where it is celebrated.',
+          {['Coffee does not need another website. It deserves a place where it is celebrated.',
             'This forum was created for one simple reason: to honor the world\'s most beloved beverage — not as a product, but as an experience.',
             'Every cup tells a story. Some celebrate victories. Some comfort heartbreaks. Some fuel ambitions. Some simply make an ordinary morning worth waking up for.',
             'This forum exists for those who believe coffee is more than caffeine.',
           ].map((p, i) => (
             <motion.p key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 + i * 0.08 }} className="font-inter text-lg leading-relaxed text-[#3B2416]/70 mb-5">{p}</motion.p>
           ))}
-          <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.6 }} className="font-playfair text-2xl text-[#B08D57] italic mt-4">
-            It is ritual. Companionship. Curiosity. Comfort.
-          </motion.p>
+          <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.6 }} className="font-playfair text-2xl text-[#B08D57] italic mt-4">It is ritual. Companionship. Curiosity. Comfort.</motion.p>
         </div>
         <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.9 }} className="relative">
           <div className="relative h-[500px] overflow-hidden">
@@ -177,7 +165,7 @@ const timelineData = [
   { era: 'c. 1000 AD', title: 'Ethiopian Origins', desc: 'The Kaffa region of Ethiopia is widely recognized as the birthplace of coffee. The Oromo people were among the first to recognize the energizing effects of the native coffee plant.', img: 'https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80' },
   { era: 'c. 1100 AD', title: 'The First Coffee Drinkers', desc: 'Islamic scholars discovered that coffee kept them alert during long hours of prayer. Sufi mystics used it as a vehicle for nighttime devotional practices. Coffee found its first spiritual identity.', img: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80' },
   { era: 'c. 1450 AD', title: 'Arrival in Yemen', desc: 'Coffee was cultivated in Yemen around the port of Mocha. The world\'s first formalized coffee culture began with rituals and ceremonies built around drinking together.', img: 'https://images.unsplash.com/photo-1559496417-e7f25cb247f3?auto=format&fit=crop&w=600&q=80' },
-  { era: 'c. 1500 AD', title: 'The First Coffee Houses', desc: 'Qahveh khaneh — coffee houses — emerged across the Middle East. Called Schools of the Wise, they became centres of intellectual exchange, music and debate. The blueprint for every café that followed.', img: 'https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=600&q=80' },
+  { era: 'c. 1500 AD', title: 'The First Coffee Houses', desc: 'Qahveh khaneh — coffee houses — emerged across the Middle East. Called Schools of the Wise, they became centres of intellectual exchange, music and debate. The blueprint for every cafe that followed.', img: 'https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=600&q=80' },
   { era: '1600-1700 AD', title: 'European Expansion', desc: 'Coffee arrived in Europe and ignited a cultural revolution. Coffee houses opened across London, Paris and Vienna. Entire economies were shaped over a cup.', img: 'https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=600&q=80' },
   { era: 'Today', title: 'A Global Language', desc: 'From third-wave specialty roasters in Melbourne to filter coffee in Chennai, from espresso bars in Milan to cold brew in New York — coffee has become the universal language of humanity. Over 2.5 billion cups consumed every day.', img: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80' },
 ]
@@ -188,15 +176,12 @@ function WhatIsCoffee() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-20">
           <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="font-inter text-xs tracking-[0.35em] uppercase text-[#B08D57]/70 mb-4">A History in Seven Chapters</motion.p>
-          <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="font-playfair text-4xl md:text-5xl lg:text-6xl text-[#FAF8F5]">
-            What Is <span className="italic text-[#B08D57]">Coffee?</span>
-          </motion.h2>
+          <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="font-playfair text-4xl md:text-5xl lg:text-6xl text-[#FAF8F5]">What Is <span className="italic text-[#B08D57]">Coffee?</span></motion.h2>
           <div className="w-10 h-px bg-[#B08D57] mx-auto mt-8"/>
         </div>
         <div className="space-y-16">
           {timelineData.map((item, i) => (
-            <motion.div key={i} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-60px' }} transition={{ duration: 0.7 }}
-              className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <motion.div key={i} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-60px' }} transition={{ duration: 0.7 }} className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div className={i % 2 !== 0 ? 'md:order-2' : ''}>
                 <p className="font-inter text-xs tracking-[0.35em] uppercase text-[#B08D57]/70 mb-2">{item.era}</p>
                 <h3 className="font-playfair text-2xl text-[#FAF8F5] mb-3">{item.title}</h3>
@@ -231,17 +216,14 @@ function CoffeeAroundTheWorld() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="font-inter text-xs tracking-[0.35em] uppercase text-[#B08D57] mb-4">A Coffee Atlas</motion.p>
-          <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="font-playfair text-4xl md:text-5xl lg:text-6xl text-[#3B2416]">
-            Coffee Around <span className="italic text-[#B08D57]">The World</span>
-          </motion.h2>
+          <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="font-playfair text-4xl md:text-5xl lg:text-6xl text-[#3B2416]">Coffee Around <span className="italic text-[#B08D57]">The World</span></motion.h2>
           <div className="w-10 h-px bg-[#B08D57] mx-auto mt-8 mb-6"/>
           <p className="font-inter text-lg leading-relaxed text-[#3B2416]/75 max-w-xl mx-auto">Six cultures. Six rituals. One universal language. Hover to discover each story.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {regions.map((r, i) => (
             <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
-              className="relative h-80 overflow-hidden cursor-pointer group"
-              onMouseEnter={() => setHovered(i)} onMouseLeave={() => setHovered(null)}>
+              className="relative h-80 overflow-hidden cursor-pointer group" onMouseEnter={() => setHovered(i)} onMouseLeave={() => setHovered(null)}>
               <Image src={r.img} alt={r.title} fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="33vw"/>
               <div className="absolute inset-0 bg-gradient-to-t from-[#2A1810]/90 via-[#2A1810]/40 to-[#2A1810]/20"/>
               <div className="absolute inset-0 flex flex-col justify-end p-6">
@@ -283,14 +265,10 @@ function WhyCoffee() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="font-inter text-xs tracking-[0.35em] uppercase text-[#B08D57] mb-4">The Case For Coffee</motion.p>
-          <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="font-playfair text-4xl md:text-5xl lg:text-6xl text-[#3B2416]">
-            Why <span className="italic text-[#B08D57]">Coffee?</span>
-          </motion.h2>
+          <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="font-playfair text-4xl md:text-5xl lg:text-6xl text-[#3B2416]">Why <span className="italic text-[#B08D57]">Coffee?</span></motion.h2>
         </div>
         <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center py-16 mb-16 border-y border-[#B08D57]/15">
-          <p className="font-playfair text-4xl md:text-6xl text-[#3B2416] leading-tight max-w-4xl mx-auto">
-            "If brewed right, it makes you <span className="italic text-[#B08D57]">damn happy.</span>"
-          </p>
+          <p className="font-playfair text-4xl md:text-6xl text-[#3B2416] leading-tight max-w-4xl mx-auto">"If brewed right, it makes you <span className="italic text-[#B08D57]">damn happy.</span>"</p>
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border border-[#D4C0A6] mb-16">
           {reasons.map((r, i) => (
@@ -349,9 +327,7 @@ function IsCoffeeGood() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="font-inter text-xs tracking-[0.35em] uppercase text-[#B08D57] mb-4">The Science Section</motion.p>
-          <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="font-playfair text-4xl md:text-5xl lg:text-6xl text-[#3B2416]">
-            Is Coffee <span className="italic text-[#B08D57]">Good?</span>
-          </motion.h2>
+          <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="font-playfair text-4xl md:text-5xl lg:text-6xl text-[#3B2416]">Is Coffee <span className="italic text-[#B08D57]">Good?</span></motion.h2>
           <div className="w-10 h-px bg-[#B08D57] mx-auto mt-8 mb-6"/>
           <p className="font-inter text-lg text-[#3B2416]/75 max-w-xl mx-auto">The short answer: yes. The longer answer requires a cup and a conversation.</p>
         </div>
@@ -407,11 +383,14 @@ function IsCoffeeBad() {
   return (
     <section id="bad" className="py-24 md:py-36 bg-[#3B2416] overflow-hidden">
       <div className="max-w-4xl mx-auto px-6 text-center">
-        <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="font-inter text-xs tracking-[0.35em] uppercase text-[#B08D57]/70 mb-6">The Honest Section</motion.p>
-        <motion.h2 initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="font-playfair text-5xl md:text-7xl text-[#FAF8F5] leading-tight mb-6">
-          "How dare <span className="italic text-[#B08D57]">you</span> say that?"
+        <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="font-inter text-xs tracking-[0.35em] uppercase text-[#B08D57]/70 mb-4">The Honest Section</motion.p>
+        <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="font-playfair text-4xl md:text-5xl lg:text-6xl text-[#FAF8F5] mb-8">
+          Is Coffee <span className="italic text-[#B08D57]">Bad?</span>
         </motion.h2>
-        <div className="w-10 h-px bg-[#B08D57] mx-auto mb-14"/>
+        <div className="w-10 h-px bg-[#B08D57] mx-auto mb-10"/>
+        <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="font-playfair italic text-3xl md:text-5xl text-[#FAF8F5] mb-14">
+          "How dare <span className="text-[#B08D57]">you</span> say that?"
+        </motion.p>
         <div className="space-y-6 mb-16">
           {[
             'But now that we are discussing it — let us be fair.',
@@ -456,9 +435,7 @@ function BrewWithUs() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end mb-16">
           <div>
             <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="font-inter text-xs tracking-[0.35em] uppercase text-[#B08D57] mb-4">Community Stories</motion.p>
-            <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="font-playfair text-4xl md:text-5xl lg:text-6xl text-[#3B2416]">
-              Brew <span className="italic text-[#B08D57]">With Us</span>
-            </motion.h2>
+            <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="font-playfair text-4xl md:text-5xl lg:text-6xl text-[#3B2416]">Brew <span className="italic text-[#B08D57]">With Us</span></motion.h2>
           </div>
           <motion.p initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="font-inter text-lg leading-relaxed text-[#3B2416]/70">
             You are about to read the stories that countless cups of coffee have quietly witnessed. Some joyful. Some heartbreaking. Every one worthwhile because it was shared over a cup.
@@ -473,8 +450,7 @@ function BrewWithUs() {
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {stories.map((s, i) => (
-            <motion.article key={i} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
-              className="group overflow-hidden">
+            <motion.article key={i} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="group overflow-hidden">
               <div className="relative h-64 overflow-hidden">
                 <Image src={s.img} alt={s.title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="33vw"/>
                 <div className="absolute inset-0 bg-gradient-to-t from-[#2A1810]/90 via-[#2A1810]/40 to-transparent"/>
@@ -528,9 +504,7 @@ function OrderNow() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16 max-w-3xl mx-auto">
           <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="font-inter text-xs tracking-[0.35em] uppercase text-[#B08D57] mb-4">The List</motion.p>
-          <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="font-playfair text-4xl md:text-5xl lg:text-6xl text-[#3B2416] mb-8">
-            Order <span className="italic text-[#B08D57]">Now</span>
-          </motion.h2>
+          <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="font-playfair text-4xl md:text-5xl lg:text-6xl text-[#3B2416] mb-8">Order <span className="italic text-[#B08D57]">Now</span></motion.h2>
           <p className="font-inter text-lg text-[#3B2416]/70 mb-2">Here are all the coffees we love. Not sponsored. Not paid promotions.</p>
           <p className="font-playfair italic text-xl text-[#B08D57]">You may love them. You may disagree. That is the beauty of coffee.</p>
         </div>
@@ -557,9 +531,7 @@ function OrderNow() {
                   <p className="font-inter text-xs tracking-[0.35em] uppercase text-[#B08D57] mb-1">{p.origin}</p>
                   <h4 className="font-playfair text-xl text-[#3B2416] mb-1">{p.name}</h4>
                   <div className="w-8 h-px bg-[#B08D57] my-4"/>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {p.notes.map(n => <span key={n} className="font-inter text-[10px] tracking-wider uppercase text-[#3B2416]/60 bg-[#E8D8C3] px-2 py-1">{n}</span>)}
-                  </div>
+                  <div className="flex flex-wrap gap-2 mb-4">{p.notes.map(n => <span key={n} className="font-inter text-[10px] tracking-wider uppercase text-[#3B2416]/60 bg-[#E8D8C3] px-2 py-1">{n}</span>)}</div>
                   <div className="flex items-center gap-2 mb-5">
                     <Coffee className="w-3.5 h-3.5 text-[#B08D57]" strokeWidth={1.5}/>
                     <span className="font-inter text-xs text-[#3B2416]/60">{p.brew}</span>
@@ -607,9 +579,7 @@ function OrderNow() {
           <p className="font-inter text-xs tracking-[0.35em] uppercase text-[#B08D57] mb-4">Have a recommendation?</p>
           <h3 className="font-playfair text-3xl text-[#3B2416] mb-4">Tell us what is in <span className="italic text-[#B08D57]">your cup.</span></h3>
           <p className="font-inter text-[#3B2416]/60 mb-10 max-w-md mx-auto">Every great coffee list is incomplete. Help us make this one better.</p>
-          <button onClick={() => setShowForm(true)} className="font-inter text-sm tracking-[0.2em] uppercase px-10 py-4 bg-[#3B2416] text-[#FAF8F5] hover:bg-[#2A1810] transition-all duration-300">
-            Let Me Suggest
-          </button>
+          <button onClick={() => setShowForm(true)} className="font-inter text-sm tracking-[0.2em] uppercase px-10 py-4 bg-[#3B2416] text-[#FAF8F5] hover:bg-[#2A1810] transition-all duration-300">Let Me Suggest</button>
         </motion.div>
         {showForm && (
           <div className="fixed inset-0 z-50 bg-[#2A1810]/80 backdrop-blur-sm flex items-center justify-center p-4">
@@ -725,17 +695,13 @@ function FloatingBeans() {
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden>
       {beans.map(b => (
         <div key={b.id} className="absolute pointer-events-auto" style={{ left: `${b.x}%`, top: `${b.y}%` }}>
-          <motion.button
-            animate={{ y: [0, -12, -6, -16, 0] }}
-            transition={{ duration: b.dur, delay: b.delay, repeat: Infinity, ease: 'easeInOut' }}
+          <motion.button animate={{ y: [0, -12, -6, -16, 0] }} transition={{ duration: b.dur, delay: b.delay, repeat: Infinity, ease: 'easeInOut' }}
             className="relative text-[#3B2416] cursor-pointer opacity-[0.12] hover:opacity-30 transition-opacity focus-visible:outline-none"
             onClick={() => {
               const fact = coffeeFacts[Math.floor(Math.random() * coffeeFacts.length)]
               setActiveFact({ id: b.id, text: fact })
               setTimeout(() => setActiveFact(null), 3500)
-            }}
-            aria-label="Click for a coffee fact"
-          >
+            }} aria-label="Click for a coffee fact">
             <svg width={b.size} height={b.size * 1.3} viewBox="0 0 24 32" fill="currentColor">
               <ellipse cx="12" cy="16" rx="8" ry="12"/>
               <path d="M12 5 Q8 11 12 16 Q16 21 12 27" stroke="#FAF8F5" strokeWidth="1.2" fill="none" strokeLinecap="round"/>
@@ -770,24 +736,16 @@ function Footer() {
               <path d="M18 6 Q12 14 18 22 Q24 30 18 38" stroke="#B08D57" strokeWidth="2" fill="none" strokeLinecap="round"/>
             </svg>
           </motion.div>
-          <motion.p initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}} transition={{ delay: 0.4 }} className="font-inter text-xs tracking-[0.4em] uppercase text-[#B08D57]/50 mb-8">
-            You have reached the bottom
-          </motion.p>
+          <motion.p initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}} transition={{ delay: 0.4 }} className="font-inter text-xs tracking-[0.4em] uppercase text-[#B08D57]/50 mb-8">You have reached the bottom</motion.p>
           <motion.h2 initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0.5 }} className="font-playfair text-4xl md:text-6xl text-[#FAF8F5] leading-tight mb-4">
             Time to put the<br/><span className="text-[#B08D57] italic">kettle on.</span> ☕
           </motion.h2>
           <motion.div initial={{ scaleX: 0 }} animate={inView ? { scaleX: 1 } : {}} transition={{ delay: 0.8 }} className="w-12 h-px bg-[#B08D57] mx-auto my-10"/>
-          <motion.p initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}} transition={{ delay: 1 }} className="font-playfair italic text-lg text-[#E8D8C3]/50 mb-12">
-            Made for people who understand that coffee is never just coffee.
-          </motion.p>
-          <motion.p initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}} transition={{ delay: 1.2 }} className="font-inter text-xs tracking-[0.3em] uppercase text-[#B08D57]/40">
-            Every great conversation starts before the first sip.
-          </motion.p>
+          <motion.p initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}} transition={{ delay: 1 }} className="font-playfair italic text-lg text-[#E8D8C3]/50 mb-12">Made for people who understand that coffee is never just coffee.</motion.p>
+          <motion.p initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}} transition={{ delay: 1.2 }} className="font-inter text-xs tracking-[0.3em] uppercase text-[#B08D57]/40">Every great conversation starts before the first sip.</motion.p>
         </motion.div>
         <motion.div initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}} transition={{ delay: 1.5 }} className="mt-16 pt-8 border-t border-[#B08D57]/10">
-          <p className="font-inter text-[10px] tracking-widest uppercase text-[#FAF8F5]/15">
-            {new Date().getFullYear()} Before The First Sip. A celebration, not a company.
-          </p>
+          <p className="font-inter text-[10px] tracking-widest uppercase text-[#FAF8F5]/15">{new Date().getFullYear()} Before The First Sip. A celebration, not a company.</p>
         </motion.div>
       </div>
     </footer>

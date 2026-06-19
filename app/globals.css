@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: #FAF8F5;
+    color: #3B2416;
+    font-family: var(--font-inter), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  ::selection { background-color: #B08D57; color: #FAF8F5; }
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: #FAF8F5; }
+  ::-webkit-scrollbar-thumb { background: #B08D57; border-radius: 3px; }
+}
+
+@layer components {
+  .section-label { @apply font-inter text-xs tracking-[0.35em] uppercase text-gold; }
+  .section-heading { @apply font-playfair text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-espresso; }
+  .section-heading-light { @apply font-playfair text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-offwhite; }
+  .body-text { @apply font-inter text-lg leading-relaxed text-espresso/75; }
+  .container-narrow { @apply max-w-4xl mx-auto px-6 md:px-8; }
+  .container-wide { @apply max-w-7xl mx-auto px-6 md:px-8; }
+}
+
+@keyframes steam {
+  0% { transform: translateY(0) scaleX(1); opacity: 0.6; }
+  50% { transform: translateY(-45px) scaleX(1.25); opacity: 0.3; }
+  100% { transform: translateY(-85px) scaleX(1.5); opacity: 0; }
+}
+
+@keyframes beanFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-14px) rotate(90deg); }
+}
